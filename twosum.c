@@ -1,4 +1,4 @@
-#include<stdio.h>
+﻿#include<stdio.h>
 #include<stdlib.h>
 #define HASH_SIZE 1000
 struct node{
@@ -7,10 +7,11 @@ struct node{
 	struct node* next;
 };
 struct node* data[HASH_SIZE];
-
+int i = 0;
 int contains(int key){
 	int hash = abs(key)%HASH_SIZE;
 	struct node* p = data[hash];
+	
 	while(p!=NULL){
 		if(p->key==key)return 1;
 		p=p->next;
