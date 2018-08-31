@@ -9,6 +9,7 @@ struct node{
 struct node* data[HASH_SIZE];
 int i = 0;
 int contains(int key){
+	int i = 0;
 	int hash = abs(key)%HASH_SIZE;
 	struct node* p = data[hash];
 	
